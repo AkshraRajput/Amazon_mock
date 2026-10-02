@@ -1,0 +1,39 @@
+.Container{
+    height: 45px;
+    padding: 0px 5px;
+    background-color: #232F3E;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.hamburger{
+    display: flex;
+    gap: 5px;
+}
+.icon-box-sign-in{
+    display: flex;
+    gap: 5px;
+    padding: auto 10px;
+}
+
+/* .Sign_in_box{
+    background-color: #242F3E;
+    width: 250px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+
+}
+
+.Sign_in_box{  
+    position: fixed;
+    top: 40px;
+    left: -350px;
+    transition: left 0.3s linear;
+} */
