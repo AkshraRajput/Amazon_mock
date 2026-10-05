@@ -3,25 +3,31 @@
 
 <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
 
+<div onclick = "hide_side_bar()" class = "overlay"></div>
+
 <div class="Sign_in_box" id="sidebar">
-    <div class="icon-box-sign-in">
-        <i class="fa-solid fa-circle-user"></i>
-        <p>Hello, Sign-in</p>
-        <i onclick="hide_side_bar()" class="fa-solid fa-xmark"></i>
-    </div>
-
-    {% for section in sidebar_sect %}
-        <div class="sidebar-section">
-            <h3>{{ section.title }}</h3>
-
-            {% for item in section.items %}
-                <p class="sidebar-item">
-                    {{ item.name }}
-                </p>
+    <div class = "side_bar_box">
+        <div class="icon-box-sign-in">
+            <i class="fa-solid fa-circle-user"></i>
+            <p>Hello, Sign-in</p>
+        </div>
+        <div class="sidebar_main">
+            {% for section in sidebar_sect %}
+                <div class="sidebar-section">
+                    <h3>{{ section.title }}</h3>
+                    {% for item in section.items %}
+                        <p class="sidebar-item">{{ item.name }}</p>
+                    {% endfor %}
+                </div>
             {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 
+    <div class = "cross">
+        <i onclick="hide_side_bar()" class="fa-solid fa-xmark"></i>
+    </div>
 </div>
+    
+
 
 <script src="{% static 'js/sidebar.js' %}"></script>
